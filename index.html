@@ -35,7 +35,7 @@
       right: 0;
       z-index: 1100;
       /* leve sombra para separar do conteúdo */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     header img {
@@ -189,10 +189,23 @@
     }
 
     /* icones SVG dentro do botão: mostra hamburger por padrão e X quando aberto */
-    .menu-toggle svg { display: block; width: 26px; height: 26px; }
-    .menu-toggle .icon-close { display: none; }
-    .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
-    .menu-toggle[aria-expanded="true"] .icon-hamburger { display: none; }
+    .menu-toggle svg {
+      display: block;
+      width: 26px;
+      height: 26px;
+    }
+
+    .menu-toggle .icon-close {
+      display: none;
+    }
+
+    .menu-toggle[aria-expanded="true"] .icon-close {
+      display: block;
+    }
+
+    .menu-toggle[aria-expanded="true"] .icon-hamburger {
+      display: none;
+    }
 
     /* nav default (desktop) */
     header nav {
@@ -202,7 +215,7 @@
     }
 
     /* mobile behavior */
-  @media (max-width: 720px) {
+    @media (max-width: 720px) {
       .hero h1 {
         font-size: 2rem;
       }
@@ -223,10 +236,10 @@
         height: 48px;
       }
 
-        /* mostrar botão hamburger */
-        .menu-toggle {
-          display: inline-flex;
-        }
+      /* mostrar botão hamburger */
+      .menu-toggle {
+        display: inline-flex;
+      }
 
       /* esconder nav por padrão em mobile; usar max-height/opacity para animação */
       header nav {
@@ -245,7 +258,7 @@
         max-height: 0;
         opacity: 0;
         transform: translateY(-6px);
-        transition: max-height .32s cubic-bezier(.2,.9,.2,1), opacity .22s ease, transform .22s ease;
+        transition: max-height .32s cubic-bezier(.2, .9, .2, 1), opacity .22s ease, transform .22s ease;
         z-index: 999;
       }
 
@@ -257,7 +270,8 @@
 
       /* mostrar quando aberto */
       header nav.open {
-        max-height: 360px; /* o suficiente para o conteúdo */
+        max-height: 360px;
+        /* o suficiente para o conteúdo */
         opacity: 1;
         transform: translateY(0);
       }
@@ -266,9 +280,11 @@
       .menu-toggle[aria-expanded="true"] span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
       }
+
       .menu-toggle[aria-expanded="true"] span:nth-child(2) {
         opacity: 0;
       }
+
       .menu-toggle[aria-expanded="true"] span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
       }
@@ -301,6 +317,7 @@
         height: 55px;
       }
     }
+
     /* --- Fim: estilos do menu mobile --- */
   </style>
 
@@ -329,14 +346,14 @@
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
       <!-- hamburger icon -->
       <svg class="icon-hamburger" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
       <!-- close icon -->
       <svg class="icon-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </button>
 
@@ -350,13 +367,8 @@
   <section class="hero" id="home">
     <h1>Pacheco Guincho</h1>
     <p>Disponível 24h em São Luís e Região</p>
-    <a href="tel:94992465930" class="btn">Ligar Agora</a>
 
-    <a href="https://wa.me/5594992465930?text=Olá%2C%20preciso%20de%20um%20guincho" class="whatsapp-btn" target="_blank">
-    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/250px-WhatsApp.svg.png"
-      alt="WhatsApp">-->
-  </a>
-
+    <a href="https://wa.me/5594992465930?text=Olá%2C%20preciso%20de%20um%20guincho" class="btn" target="_blank">Whatsapp</a>
 
   </section>
 
@@ -390,7 +402,7 @@
       <p><strong>CNPJ:</strong> 61.844.702/0001-46</p>
       <p><strong>Endereço:</strong> São Luís - MA</p>
     </div>
-   <!-- <a href="tel:94992465930" class="btn">Ligar Agora</a>-->
+    <!-- <a href="tel:94992465930" class="btn">Ligar Agora</a>-->
   </section>
 
   <a href="https://wa.me/5594992465930?text=Olá%2C%20preciso%20de%20um%20guincho" class="whatsapp-btn" target="_blank">
